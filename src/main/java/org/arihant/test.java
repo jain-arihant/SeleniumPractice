@@ -25,9 +25,7 @@ public class test {
                 if (map.containsKey(complement)){
                     return new int[] {map.get(complement),i};
                 }
-                else {
                     map.put(list[i],i);
-                }
             }}
         else {
             System.out.println("The list is empty!!");
@@ -35,5 +33,4 @@ public class test {
         System.out.println(map);
         return null;
     }
-
 }
