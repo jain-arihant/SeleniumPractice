@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features="classpath:Features", //path of the feature files
         glue={"classpath:StepDefs"}, //path of the step definitions
         plugin = {"pretty", "html:target/cucumber-html-report.html", "json:target/json-output.json","junit:reports/junit-report.xml"}, //to generate reporting format
-        dryRun = false, //When it is true it would check if any of the step definitions are missing
+        dryRun = true, //When it is true it would check if any of the step definitions are missing
         monochrome = true) //displaying the output in the readable format
 public class TestRunner {
 

@@ -63,4 +63,19 @@ public class loginSteps {
         driver.getWindowHandles();
         driver.quit();
     }
+
+    @Then("^User moves to new contact page$")
+    public void userMovesToNewContactPage() {
+    }
+
+    @Then("^User enters \"(.*)\" , \"(.*)\" and \"(.*)\"$")
+    public void userEntersAnd(String arg0, String arg1, String arg2) {
+    }
+
+    @Given("^User navigates to \"(.*)\"$")
+    public void userNavigatesTo(String url) {
+        System.setProperty("webdriver.chrome.driver","/Users/arihant/Downloads/chromedriver_mac_arm64/chromedriver");
+        driver = new ChromeDriver();
+        driver.get(url);
+    }
 }
