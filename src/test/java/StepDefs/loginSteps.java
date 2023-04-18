@@ -36,16 +36,31 @@ public class loginSteps {
 //        Assert.assertEquals("Google", title);
     }
 
-    @And("User enters the username and password")
+    @And("^User enters the username and password$")
     public void enters_username_password(){
         System.out.println("Testing and");
         driver.findElement(By.name("email")).sendKeys("jainarihant1296@gmail.com");
         driver.findElement(By.name("password")).sendKeys("Testing@123");
     }
+//    using parameters to pass the values provided in the script
+//    "(.*)" regular expression
+//    ([^\”]*) regular expression
+    @And("^User enters the \"(.*)\" and \"(.*)\"$")
+    public void user_enters_the_and(String username, String password){
+        driver.findElement(By.name("email")).sendKeys(username);
+        driver.findElement(By.name("password")).sendKeys(password);
+    }
+
     @Then("^I close the browser$")
     public void iCloseTheBrowser() {
-        System.setProperty("webdriver.chrome.driver","/Users/arihant/Downloads/chromedriver_mac_arm64/chromedriver");
-        driver = new ChromeDriver();
+//        System.setProperty("webdriver.chrome.driver","/Users/arihant/Downloads/chromedriver_mac_arm64/chromedriver");
+//        driver = new ChromeDriver();
+        driver.quit();
+    }
+
+    @Then("I close all the browser")
+    public void iCloseAllTheBrowser() {
+        driver.getWindowHandles();
         driver.quit();
     }
 }

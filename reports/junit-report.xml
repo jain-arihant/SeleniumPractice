@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.63" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Login to FreeCRM" name="Login to FreeCRM" time="6.575">
+<system-out><![CDATA[
+Given User navigates to URL.................................................passed
+And User enters the "jainarihant1296@gmail.com" and "Testing@123"...........passed
+When User clicks on login...................................................passed
+Then I close all the browser................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
