@@ -1,5 +1,6 @@
 Feature: Login to FreeCRM
 
+  @Test
   Scenario: Login to FreeCRM
     Given User navigates to URL
 #    And User clicks on login
