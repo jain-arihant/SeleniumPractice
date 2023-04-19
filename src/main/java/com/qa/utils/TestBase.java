@@ -1,5 +1,6 @@
 package com.qa.utils;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -34,6 +35,7 @@ public class TestBase {
         }
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
+//        driver.manage().window().setSize(new Dimension(1024,920)); // sets the dimention of the browser with width and height
         driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 
